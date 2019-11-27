@@ -1,7 +1,7 @@
 """Posts views."""
 
 # Django libraries
-
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
 
@@ -37,6 +37,6 @@ POSTS = [
         'photo': 'https://picsum.photos/500/700/?image=1076',
     }
 ]
-
+@login_required
 def list_posts(request):
     return render(request, 'posts/feed.html', {'posts': POSTS})
