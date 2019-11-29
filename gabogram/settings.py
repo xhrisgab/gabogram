@@ -55,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'gabogram.middleware.ProfileCompletionMiddleware',
 ]
 
 ROOT_URLCONF = 'gabogram.urls'
@@ -134,4 +135,4 @@ STATICFILES_FINDERS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-LOGIN_URL = '/users/login/'
+LOGIN_URL = '/users/login'
